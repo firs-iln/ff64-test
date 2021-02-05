@@ -7,7 +7,8 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return "Привет от приложения Flask"
+    with open('index.html', 'r', encoding='utf-8') as file:
+        return file.read()
 
 
 if __name__ == '__main__':
